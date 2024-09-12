@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Submerge M1 Proposal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+        <link rel="icon" type="image/png" href="./img/favicon.ico">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="page-header-container">
+            <div class="page-header">
+                <img class="helikon-logo" src="./img/helikon.png" alt="Helikon">
+                <img class="polkadot-logo" src="./img/polkadot.png" alt="Polkadot">
+            </div>
+            <hr>
+        </div>
+        <div class="content-container">
+            <div class="content">
+                <div class="header-1">submerge.io</div>
+                <div class="header-2">Open-Source Indexer, Analysis, KYT, and AML Compliance Platform<br>for the Polkadot Ecosystem</div>
+                <div class="summary-table">
+                    <div class="summary-row">
+                        <div class="summary-title-cell">Proponent:</div>
+                        <div>HELIKON (<a href="https://polkadot.subscan.io/account/15fTH34bbKGMUjF1bLmTqxPYgpg481imThwhWcQfCyktyBzL" target="_blank"><span class="mono">15fT...yBzL</span></a>)</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-title-cell">Beneficiary:</div>
+                        <div>HELIKON (<a href="https://polkadot.subscan.io/account/15fTH34bbKGMUjF1bLmTqxPYgpg481imThwhWcQfCyktyBzL" target="_blank"><span class="mono">15fT...yBzL</span></a>)</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-title-cell">Date:</div>
+                        <div>September 10, 2024</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-title-cell">Request:</div>
+                        <div>$180,000.00 USDT for Milestone 1 of 2</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-title-cell">Summary:</div>
+                        <div>An open-source, high-performance, high-availability multi-chain indexer, scanner, data analysis, real-time analytics, Know Your Transaction (KYT) and Anti-Money Laundering (AML) compliance platform for the Polkadot ecosystem.</div>
+                    </div>
+                    <div class="summary-row">
+                        <div class="summary-title-cell">Category:</div>
+                        <div>Software Development</div>
+                    </div>
+                </div>
+                <div class="section" id="introduction">
+                    <div class="section-header">1. Introduction</div>
+                    <div class="section-body">
+                        Submerge is an <u>open-source data platform</u> designed and developed by Polkadot natives. It addresses several critical gaps in the Polkadot ecosystem for developers and users:
+                        <ul>
+                            <li>Lack of indexer/explorer/scanner alternatives.</li>
+                            <li>Limited open-access data analysis and analytics tools.</li>
+                            <li>Insufficient KYT integration and intelligence gathering.</li>
+                            <li>No AML compliance research, development, and tooling.</li>
+                            <li>Insufficient real-time visualization of entities, relationships and dynamics.</li>
+                        </ul>
+                        <br>
+                        Submerge is a continuation of <a href="https://helikon.io" target="_blank">Helikon</a>'s previous work, building on the foundation of:
+                        <ul>
+                            <li><a href="https://subvt.io" target="_blank">SubVT</a> (indexing, ETL, data services, notifications, UI/UX design, mobile development),</li>
+                            <li><a href="https://chainviz.app/" target="_blank">Chainviz</a> (data visualization, UI/UX design, web development),</li>
+                            <li>and <a href="https://followthedot.live/" target="_blank">followthedot.live</a> (indexing, graph visualization).</li>
+                        </ul>
+                        <div class="figure-container">
+                            <div class="figure-half">
+                                <img src="./img/sm_ftd_scr.png" alt="Follow the DOT">
+                                <a class="figure-info" href="https://followthedot.live" target="_blank">followthedot.live</a>
+                            </div>
+                            <div class="figure-half">
+                                <img src="./img/sm_cv_scr.png" alt="Chainviz">
+                                <a class="figure-info" href="https://chainviz.app" target="_blank">chainviz.app</a>
+                            </div>
+                        </div>
+                        Please view <a href="#company-background">section 11</a> for more information on the company and the team.<br>
+                        <br>
+                        This proposal seeks funding for Milestone 1 of the project, which will deliver core functionalities over the 3 months following the approval of the proposal.
+                    </div>
+                </div>
+                <div class="section" id="problem-statement">
+                    <div class="section-header">2. Problem Statement</div>
+                    <div class="section-body">
+                        <ol type="A">
+                            <li><strong>Vendor Lock-In:</strong> Polkadot primarily relies on Subscan as the only fully functional scanner, indexer, and explorer. Alternatives such as Polkascan, Polkastats, and Polkaholic are either discontinued or unmaintained, while Statescan provides limited functionality.</li>
+                            <li><strong>Limited Open-Access Data Analysis and Analytics Tools:</strong> Although the Parity Data Dashboards and the Dune integration expanded insights into the ecosystem networks, a comprehensive data platform is still needed. Such a platform would enable various algorithms (clustering, community detection, links, anomaly detection, autoencoders, association mining) to be applied to indexed data, offering deeper insights into account behaviors and network dynamics. Currently, no platform provides comprehensive insights into fluid network dynamics through 2D or 3D real-time and historical visualizations.</li>
+                            <li><strong>Insufficient KYT Integration and Intelligence Gathering:</strong> Currently, there is no open-access KYT and screening solution available for institutional and individual DOT holders. While Merkle Science offers its account attribution API to Subscan and various wallets, the ecosystem needs a dedicated application to meet its attribution, analysis, KYT, and screening requirements.</li>
+                            <li><strong>No AML Compliance Research, Development, and Tooling:</strong> There is no comprehensive effort in AML research, compliance or tooling development within the Polkadot ecosystem. This limits the network's ability to detect and prevent suspicious (financial) activities. A reliable solution is crucial for ensuring long-term trust and regulatory compliance.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="section" id="proposed-solution">
+                    <div class="section-header">3. Proposed Solution</div>
+                    <div class="section-body">
+                        Submerge proposes a comprehensive <u>data processing platform</u> to address the challenges identified in the Problem Statement section.
+                        <div class="figure-container">
+                            <img src="./img/sm_arch.jpg" alt="Submerge architecture">
+                        </div>
+                        <div class="section-body">
+                            <ol type="A">
+                                <li>
+                                    <strong><i>Submerge</i> Indexer</strong><br>
+                                    We will leverage our expertise from developing the SubVT Indexer to build a high-performance, high-availability, open-source multi-chain indexer in Rust. The indexer is going to be responsible for fetching the blockchain data from RPC archive nodes, and feeding it into the ETL layer, which in turn will store the data in OLAP, OLTP and in-memory databases to address the high-availability and performance requirements of various use cases.<br>
+                                    <br>
+                                    We will implement a block scanner/explorer web application to present the complete blockchain data to the users. It will provide an interface to all Submerge services and account management functionalities (visualizations, Analyst, Sentinel, settings, credits, API keys, etc.).
+                                <li>
+                                    <strong><i>Submerge</i> Analyst and Real-Time Analytics</strong><br>
+                                    The Analyst component will host various data analysis algorithms to be applied to the indexed data, allowing users to discover clusters, relationships, associations, and anomalies in the blockchain data. The component will also run graph algorithms for deep, network-wide and inter-network analytics. The Real-Time Analytics component will monitor newly produced blocks, running analysis algorithms on state data, allowing users to gain real-time insights and receive notifications.
+                                </li>
+                                <li>
+                                    <strong><i>Submerge</i> Sentinel</strong><br>
+                                    The Sentinel monitors blockchain state changes in real-time for anomalies and security breaches, identifying and flagging suspicious activities in coordination with the Analyst and Real-Time Analytics components. We will collaborate with regulators and institutions to understand their compliance requirements and ensure they are effectively integrated into the Polkadot ecosystem. We will also focus on securing the ecosystem by integrating external KYT/AML service providers while also building our own intelligence-gathering capabilities.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="key-benefits">
+                    <div class="section-header">4. Key Benefits</div>
+                    <div class="section-body">
+                        <ul>
+                            <li>
+                                <strong>Ecosystem Resilience:</strong>
+                                Submerge offers a robust alternative to existing indexing solutions, eliminating the dependency on a single solution. This ensures resilience and stability.
+                            <li>
+                                <strong>Seamless Onboarding:</strong>
+                                We will help onboard new and existing development teams by providing a seamless process that minimizes costs and initial integration efforts. Submerge will offer the best path for teams to make their data and insights available to their audiences.
+                            </li>
+                            <li>
+                                <strong>Enhanced Security, Compliance, and Transparency:</strong>
+                                Submerge will enable real-time monitoring and reporting of suspicious activities, historical analysis through previously unavailable facilities, and increased visibility into account relationships and network dynamics. These features will introduce new security, compliance, and transparency levels for the Polkadot ecosystem.
+                            </li>
+                            <li>
+                                <strong>Stake-to-Access (S2A):</strong>
+                                A brand new utility for the DOT Token: Submerge's basic features will be free for all DOT holders, while premium features will reward larger DOT stakeholders. By staking DOT, users unlock premium features, driving increased demand for the token and creating additional network utility.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section" id="project-overview">
+                    <div class="section-header">5. Project Overview</div>
+                    <div class="section-body">
+                        The project consists of 2 milestones. Each milestone will be a separate proposal. Below is an overview of Milestones 1 and 2.<br>
+                        <br>
+                        We will publish monthly progress reports to inform the community on the developments.
+                        <div class="subsection-title">Legend:</div>
+                        <table class="legend">
+                            <tr>
+                                <td class="legend-symbol">T0</td>
+                                <td>Milestone 1 official start date. Planned November 1st, 2024</td>
+                            </tr>
+                            <tr>
+                                <td class="legend-symbol">T1</td>
+                                <td>End of Milestone 1, beginning of Milestone 2. Planned February 1st, 2024.</td>
+                            </tr>
+                            <tr>
+                                <td class="legend-symbol">✅</td>
+                                <td>Task completed as part of the milestone.</td>
+                            </tr>
+                            <tr>
+                                <td class="legend-symbol">⏳</td>
+                                <td>Task partially completed as part of the milestone.</td>
+                            </tr>
+                        </table>
+                        <div class="subsection-title">Milestone 1 (Current Proposal):</div>
+                        <ul>
+                            <li>Duration: T0 + 3 months</li>
+                            <li>Cost: $180,000 USDT</li>
+                            <li>Deliverables:
+                                <ul>
+                                    <li>✅ Data Repository</li>
+                                    <li>✅ Indexer</li>
+                                    <li>✅ Analyst</li>
+                                    <li>✅ Notification Manager</li>
+                                    <li>✅ KYT/AML Integration</li>
+                                    <li>⏳ API</li>
+                                    <li>⏳ Web Application</li>
+                                    <li>⏳ Real-Time Analytics</li>
+                                    <li>⏳ Sentinel</li>
+                                </ul>
+                            </li>
+                            <li>A detailed breakdown of Milestone 1 activities and deliverables is under <a href="#project-details">Project Details</a>.</li>
+                        </ul>
+                        <div class="subsection-title">Milestone 2 (Next Proposal):</div>
+                        <ul>
+                            <li>Duration: T1 + 3 months</li>
+                            <li>Cost: $189,000 USDT</li>
+                            <li>Deliverables:
+                                <ul>
+                                    <li>✅ API</li>
+                                    <li>✅ Web Application</li>
+                                    <li>✅ Real-Time Analytics</li>
+                                    <li>✅ Sentinel</li>
+                                </ul>
+                            </li>
+                            <li>A detailed breakdown of Milestone 2 activities and deliverables is under <a href="#project-details">Project Details</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section" id="project-details">
+                    <div class="section-header">6. Project Details</div>
+                    <div class="section-body">
+                        <div class="subsection-title">Milestone 1 Breakdown</div>
+                        <table class="project-details">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>Component</td>
+                                    <td>Task &amp; Deliverables</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Data Repository</td>
+                                    <td>
+                                        <ul>
+                                            <li>Documentation of data repository design, OLTP and OLAP database choices, and ETL pipeline.</li>
+                                            <li>Complete data repository implementation including the ETL layer, the integration of different databases, and implementation of message queues where necessary.</li>
+                                            <li>Docker containers and build/run documentation.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Indexer</td>
+                                    <td>
+                                        <ul>
+                                            <li>Development of the indexer for all supported chains.</li>
+                                            <li>Well-documented source code published in the public repository.</li>
+                                            <li>Test cases with the widest possible coverage.</li>
+                                            <li>Milestone delivery and software architecture documents.</li>
+                                            <li>Docker containers and build/run documentation.</li>
+                                            <li>Complete indexed data in the data repository, and continuous indexing of the new blocks.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Analyst</td>
+                                    <td>
+                                        <ul>
+                                            <li>Specification and documentation of the required algorithms and tools.</li>
+                                            <li>Exploration of open-source analysis libraries for the supported algorithms.</li>
+                                            <li>Implementation of account relationship, proxied extrinsics and other network dynamics analysis components.</li>
+                                            <li>Complete implementation of the algorithms and interfaces with the rest of the platform that connects with this component.</li>
+                                            <li>Test cases with the widest possible coverage.</li>
+                                            <li>Well-documented source code published in the public repository.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Notification Manager</td>
+                                    <td>
+                                        <ul>
+                                            <li>Implementation and documentation of the notification generator and processor components.</li>
+                                            <li>Interfacing with necessary services such as Element/Matrix, Telegram, and other notification/pager services.</li>
+                                            <li>Test cases with the widest possible coverage.</li>
+                                            <li>Well-documented source code published in the public repository.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>KYT/AML Integration</td>
+                                    <td>
+                                        <ul>
+                                            <li>Interfacing of the necessary components with the external providers, and necessary documentation.</li>
+                                            <li>Documentation of the processes for internal intelligence-gathering for self-reliant KYT/AML</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>⏳</td>
+                                    <td>API</td>
+                                    <td>
+                                        <ul>
+                                            <li>All API endpoints and data types will be documented in Swagger or alternative standard format.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>⏳</td>
+                                    <td>Branding and Web Application Design</td>
+                                    <td>
+                                        <ul>
+                                            <li>Branding document.</li>
+                                            <li>Figma files for UX map, wireframe design, and UI design.</li>
+                                            <li>Complete design and mock implementations of data visualizations of account relations, balance flows, and other network dynamics.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>⏳</td>
+                                    <td>Real-Time Analytics</td>
+                                    <td>
+                                        <ul>
+                                            <li>Specification and documentation of analytics requirements.</li>
+                                            <li>Exploration of open-source real-time analytics components. We will create a Functional Requirements Doc and a Product Feasibility Study (includes testing).</li>
+                                            <li>Detailed development and integration plan for milestone 2.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>⏳</td>
+                                    <td>Sentinel</td>
+                                    <td>
+                                        <ul>
+                                            <li>SSpecification of security and implementation requirements.</li>
+                                            <li>Exploration and documentation of open-source components, and documentation of the required in-house development.</li>
+                                            <li>Detailed development and integration plan for milestone 2.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="subsection-title">Milestone 2 Breakdown</div>
+                        <table class="project-details">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>Component</td>
+                                    <td>Task &amp; Deliverables</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>API</td>
+                                    <td>
+                                        <ul>
+                                            <li>Well-documented source code published in the public repository.</li>
+                                            <li>Widest possible test coverage.</li>
+                                            <li>Updates to the API documentation where necessary.</li>
+                                            <li>Docker containers and build/run documentation.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Web Application</td>
+                                    <td>
+                                        <ul>
+                                            <li>Well-documented source code published in the public repository.</li>
+                                            <li>Docker containers and build/run documentation.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Real-Time Analytics</td>
+                                    <td>
+                                        <ul>
+                                            <li>Well-documented source code published in the public repository.</li>
+                                            <li>Docker containers and build/run documentation.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Sentinel</td>
+                                    <td>
+                                        <ul>
+                                            <li>Develop suspicious activity detection algorithms.</li>
+                                            <li>Implement an alert system for flagged transactions.</li>
+                                            <li>Well-documented source code published in the public repository.</li>
+                                            <li>Docker containers and build/run documentation.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>✅</td>
+                                    <td>Integration and Testing</td>
+                                    <td>
+                                        <ul>
+                                            <li>Integrate Indexer, Sentinel, and Analyst components.</li>
+                                            <li>Perform comprehensive system testing.</li>
+                                            <li>Bug fixing and performance optimization.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="subsection-title">Supported Chains:</div>
+                        By the end of Milestone 2, the platform will support Polkadot and Kusama relay chains, and their parachains as listed below.
+                        <ul>
+                            <li>Polkadot
+                                <ul>
+                                    <li>System Parachains (Asset Hub, Bridge Hub, Collectives, Coretime, People)</li>
+                                    <li>Parachains (Bifrost, Centrifuge, Hydration, Hyperbridge, Moonbeam, Mythos)</li>
+                                </ul>
+                            </li>
+                            <li>Kusama
+                                <ul>
+                                    <li>System Parachains (Asset Hub, Bridge Hub, Coretime, People)</li>
+                                    <li>Parachains (Bifrost, Moonriver)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section" id="team-structure">
+                    <div class="section-header">7. Team Structure, Responsibilities and Costs</div>
+                    <div class="section-body">
+                        A total of 6 FTE will be dedicated to the full 6-month development period.<br>
+                        <div class="subsection-title">Resources Costs (will stop at the end of the 6 months)</div>
+                        <table class="cost-details">
+                            <thead>
+                                <tr>
+                                    <td>Role</td>
+                                    <td>Responsibilities</td>
+                                    <td>Monthly Cost</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Project Manager, Architect &amp; Lead Developer</td>
+                                    <td>
+                                        <ul>
+                                            <li>Design and enforcement of overall system architecture.</li>
+                                            <li>Development and documentation of inter-component communication protocol, and other interfaces.</li>
+                                            <li>Overseeing of development.</li>
+                                            <li>Project management.</li>
+                                        </ul>
+                                    </td>
+                                    <td>$8,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Design Team</td>
+                                    <td>
+                                        <ul>
+                                            <li>Branding.</li>
+                                            <li>Web application UI/UX design.</li>
+                                            <li>Styling of educational material and other content.</li>
+                                        </ul>
+                                    </td>
+                                    <td>$6,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Data Analyst</td>
+                                    <td>
+                                        <ul>
+                                            <li>Integration and development of various data analysis algorithms into the Analyst.</li>
+                                            <li>Development of the Sentinel's insight and intelligence gathering capabilities.</li>
+                                        </ul>
+                                    </td>
+                                    <td>$8,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Systems Developer</td>
+                                    <td>
+                                        <ul>
+                                            <li>Development of the Indexer, the ETL layer and the Data Repository.</li>
+                                            <li>Development of the external KYT/AML integrations.</li>
+                                            <li>Interfacing of components though message queues or other systems.</li>
+                                        </ul>
+                                    </td>
+                                    <td>$7,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Full-Stack Developer</td>
+                                    <td>
+                                        <ul>
+                                            <li>Development of the web application</li>
+                                            <li>Development of the API.</li>
+                                        </ul>
+                                    </td>
+                                    <td>$5,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Content Production</td>
+                                    <td>
+                                        <ul>
+                                            <li>Creation, editing and publishing of educational content on security, compliance and Submerge features.</li>
+                                        </ul>
+                                    </td>
+                                    <td>$2,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="total-title">Monthly Total</td>
+                                    <td>$36,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="total-title">3 Months Total</td>
+                                    <td>$109,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="total-title">6 Months Total</td>
+                                    <td>$219,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="subsection-title">Running Costs</div>
+                        <table class="cost-details">
+                            <thead>
+                                <tr>
+                                    <td>Role</td>
+                                    <td>Responsibilities</td>
+                                    <td>Monthly Cost</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Infrastructure and Maintenance</td>
+                                    <td>
+                                        <ul>
+                                            <li>Datacenter dedicated hardware, bandwidth, energy, and maintenance costs. *</li>
+                                        </ul>
+                                        <br>
+                                        <i>* Helikon runs all of its validation, infrastructure and application services on its own servers hosted in a data center. We will dedicate a new rack of high-performance hardware to Submerge and acquire symmetrical 5G bandwidth separate from our current services.</i>
+                                    </td>
+                                    <td>$5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>KYT/AML External Data Provider Fees</td>
+                                    <td>
+                                        <ul>
+                                            <li>Access fees for external KYT/AML, wallet screening and regulatory data providers.</li>
+                                        </ul>
+                                    </td>
+                                    <td>$20,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="total-title">Monthly Total</td>
+                                    <td>$25,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="total-title">3 Months Total</td>
+                                    <td>$75,000</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="total-title">6 Months Total</td>
+                                    <td>$150,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="section" id="pricing">
+                    <div class="section-header">8. Pricing Model: Free Tier & Stake to Access (S2A)</div>
+                    <div class="section-body">
+                        We aim to make the entire core application free for the Polkadot community. The indexer/scanner web application will be accessible to everyone at no cost, while our other 2 applications (Analyst and Sentinel) will be available to all DOT holders based on their staked DOT.<br>
+                        <br>
+                        Depending on the amount staked, users will receive monthly credits to access the applications, creating additional utility for the DOT token. This new approach, which we call “Stake to Access” (S2A), offers a sustainable and community-friendly funding model. In the future, we may explore using staking rewards from our validators to cover operational costs. 
+                    </div>
+                </div>
+                <div class="section" id="ecosystem-fit">
+                    <div class="section-header">9. Ecosystem Fit &amp; Benefits</div>
+                    <div class="section-body">
+                        <table class="product-comparison">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>Submerge</td>
+                                    <td><a href="https://polkadot.subsquare.io/referenda/1065" target="_blank">Chainalysis</a></td>
+                                    <td><a href="https://polkadot.subsquare.io/referenda/1083" target="_blank">Scorechain</a></td>
+                                    <td><a href="https://polkadot.subsquare.io/referenda/1121" target="_blank">GlobalLedger</a></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Free Forever for All DOT Holders</strong></td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Complete Scanner/Explorer</strong></td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Existing Substrate Expertise</strong></td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Existing DOT KYT/AML Data</strong></td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Number of Supported Chains</strong></td>
+                                    <td>19</td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Educational Material</strong></td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                    <td>✅</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Delivery Time</strong></td>
+                                    <td>6 months</td>
+                                    <td>12 months</td>
+                                    <td>❓</td>
+                                    <td>26 months</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Open Source</strong></td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                    <td>✅</td>
+                                    <td>❌</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Price</strong></td>
+                                    <td>$369K</td>
+                                    <td>$6.51M</td>
+                                    <td>$508K</td>
+                                    <td>$1.72M *</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="product-comparison-note"><i>* 400K DOT @ $4.31<br>= $1,724,000</i></div>
+                    </div>
+                </div>
+                <div class="section" id="after-milestone-2">
+                    <div class="section-header">10. What Happens After Milestone 2?</div>
+                    <div class="section-body">
+                        After Milestone 2 is completed and the project delivered, the scanner/explorer will remain free forever for everyone. The S2A credit model will continue.
+                    </div>
+                </div>
+                <div class="section" id="company-background">
+                    <div class="section-header">11. Company Background & Team Information</div>
+                    <div class="section-body">
+                        The team behind Submerge has a proven track record in delivering high-quality open-source projects within the Polkadot ecosystem, including:
+                        <ul>
+                            <li>SubVT Indexer and Backend System [<a href="https://github.com/helikon-labs/subvt-backend" target="_blank">GitHub</a>]</li>
+                            <li>SubVT Kusama and Polkadot Telegram Bots [<a href="https://github.com/helikon-labs/subvt-backend/tree/main/subvt-telegram-bot" target="_blank">GitHub</a>]
+                                <ul>
+                                    <li>Developed under W3F Open Grant <a href="https://github.com/w3f/Grants-Program/blob/23bd6f9715aade73e137ac03a5ecc26b4eb32b9b/applications/subvt-telegram-bot.md" target="_blank">#706</a></li>
+                                    <li><a href="https://t.me/subvt_polkadot_bot" target="_blank">Polkadot Bot</a></li>
+                                    <li><a href="https://t.me/subvt_kusama_bot" target="_blank">Kusama Bot</a></li>
+                                </ul>
+                            </li>
+                            <li>SubVT iOS - for iPhone, iPad and Apple Watch [<a href="https://github.com/helikon-labs/subvt-ios" target="_blank">GitHub</a>]
+                                <ul>
+                                    <li>Developed under Kusama Treasury Grant <a href="https://kusama.subsquare.io/treasury/proposals/99" target="_blank">#99</a></li>
+                                    <li>Swift Data Library [<a href="https://github.com/helikon-labs/subvt-data-swift" target="_blank">GitHub</a>]</li>
+                                    <li><a href="https://apps.apple.com/tr/app/subvt/id1602653455" target="_blank">App Store</a></li>
+                                </ul>
+                            </li>
+                            <li>SubVT Android [<a href="https://github.com/helikon-labs/subvt-android" target="_blank">GitHub</a>]
+                                <ul>
+                                    <li>Developed under Kusama Treasury Grant <a href="https://kusama.subsquare.io/treasury/proposals/99" target="_blank">#99</a></li>
+                                    <li>Android Data Library [<a href="https://github.com/helikon-labs/subvt-data-android" target="_blank">GitHub</a>]</li>
+                                    <li>Pending open testing</li>
+                                </ul>
+                            </li>
+                            <li><a href="https://followthedot.live/" target="_blank">followthedot.live</a> [<a href="https://github.com/helikon-labs/followthedot" target="_blank">GitHub</a>]</li>
+                            <li><a href="https://richvalidator.me" target="_blank">richvalidator.me</a> [<a href="https://github.com/helikon-labs/rich-validator" target="_blank">GitHub</a>]</li>
+                            <li><a href="https://alpha.chainviz.app/" target="_blank">Chainviz Alpha</a> [<a href="https://github.com/helikon-labs/chainviz/tree/alpha" target="_blank">GitHub</a>]</li>
+                            <li><a href="https://chainviz.app/" target="_blank">Chainviz</a> [<a href="https://github.com/helikon-labs/chainviz" target="_blank">GitHub</a>]
+                                <ul>
+                                    <li>Developed under W3F Open Grant <a href="https://github.com/w3f/Grants-Program/pull/1254" target="_blank">#1254</a></li>
+                                </ul>
+                            </li>
+                            <li>Chainsynth [<a href="https://github.com/helikon-labs/chainsynth" target="_blank">GitHub</a>]</li>
+                        </ul>
+                        <br>
+                        Helikon is a member of the Polkadot and Kusama Thousand Validators programs, and the Infrastructure Builders Program (IBP). Helikon provides RPC services for 28 ecosystem chains through 56 archive nodes.<br>
+                        <br>
+                        These projects and services demonstrate our technical capability and commitment to the growth of the Polkadot network.<br>
+                        <br>
+                        We will hire for the Data Analyst and Full-Stack Developer positions, for which several candidates are under consideration. Brand and graphic designers will be hired under our partnership with Klad. The rest of the team members and design team management are listed below.<br>
+                        <br>
+                        <div class="subsection-title">Kutsal Kaan Bilgin (kukabi) - Project Manager, Lead Architect and Developer</div>
+                        Founder of Helikon Labs. Software developer with a degree in Computer Science and 22 years of experience in software development and leadership in diverse fields such as fintech, defense industry, GIS, social media, interactive art installations, and blockchain/Web3.0. Focusing on user-friendly, aesthetically pleasing, and creative blockchain application development since late 2019. Polkadot native since early 2021. Developer of SubVT (please see above) iOS/Android applications and Telegram bots, Chainviz, followthedot.live, ChainSynth, and more.<br>
+                        <br>
+                        <div class="subsection-title">Eyup Gurel - Systems Developer</div>
+                        Senior systems developer with extensive experience in the blockchain/Web3.0 industry and systems development with Rust and C++. Past positions include principal engineering at a prominent DEX platform, systems development at a CEX, full-stack and mobile development at various mid- to large-scale companies.<br>
+                        <br>
+                        <div class="subsection-title">Egor Zmaznev - Design Head and Product Consultant</div>
+                        Egor comes from a business analytics background with an emphasis on DeFi and Web3.0 business models. He is proficient in R and Python in applications to ML modeling, focusing primarily on textual analytics in business applications with research emphasis on DeFi and DAOs. One of the co-founders of Klad Syndicate, where he managed a set of crypto projects varying from smart contract analytics to NFT marketplaces.<br>
+                        <br>
+                        <div class="subsection-title">Daria Kravchenko - Design Management and Product Communications</div>
+                        Daria focuses on internal team management. Coming from a conflict resolution education background, she can effectively set up and organize all of the internal communications and carry task management. Together with the designers, Daria worked on and finalized over 35 design projects only in the past year as a Klad Syndicate co-founder. Previously, she managed the design processes for SubVT and Chainviz for Helikon.<br>
+                    </div>
+                </div>
+                <div class="section" id="conclusion">
+                    <div class="section-header">12. Conclusion</div>
+                    <div class="section-body">
+                        Submerge aims to strengthen the Polkadot ecosystem by providing a robust alternative to the current indexing and scanner solutions, offering advanced analysis tools, and implementing comprehensive AML/KYT measures.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

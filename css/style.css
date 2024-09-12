@@ -1,0 +1,399 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    color: #666666;
+    background-color: #666666;
+    height: 1px;
+    border: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+.content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: clip;
+    overflow-y: scroll;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    width: 720px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 128px;
+    text-align: justify;
+}
+
+.page-header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.page-header {
+    background: #FFFFFF;
+    width: 720px;
+    height: 70px;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header .helikon-logo {
+    width: 150px;
+    margin-left: 16px;
+}
+
+.page-header .polkadot-logo {
+    width: 150px;
+    margin-right: 16px;
+}
+
+.header-1 {
+    font-size: 42px;
+    margin-top: 36px;
+    line-height: 52px;
+}
+
+.header-2 {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 4px;
+}
+
+.mono {
+    font-family: monospace;
+}
+
+table {
+    padding: 0px;
+}
+
+td {
+    padding: 0px;
+}
+
+.summary-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+}
+
+.summary-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.summary-row div {
+    padding: 6px 0px;
+}
+
+.summary-title-cell {
+    flex-basis: 90px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.section {
+    margin-top: 24px;
+}
+
+.section-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-body {
+    margin-top: 16px;
+}
+
+.figure-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.figure-half {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.figure-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.figure-info {
+    font-style: italic;
+    font-size: 14px;
+}
+
+ol {
+    margin: 0px;
+}
+
+ol li {
+    margin-bottom: 8px;
+}
+
+ol > li::marker {
+    font-weight: bold;
+}
+
+ul {
+    margin: 0px;
+}
+
+ul li {
+    margin-top: 8px;
+}
+
+.subsection-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+/* legend table */
+table.legend {
+    width: 100%;
+    padding: 0px !important;
+    margin-top: 12px;
+    border: 0px solid transparent;
+}
+
+table.legend td {
+    padding: 6px;
+    border: 1px solid #CCCCCC;
+}
+
+table.legend td.legend-symbol {
+    text-align: center;
+}
+
+#project-overview ul {
+    margin-top: 8px;
+}
+
+#project-overview ul li {
+    margin-bottom: 2px;
+}
+
+#project-details ul {
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-right: 6px;
+}
+
+#project-details ul li {
+    margin-bottom: 2px;
+}
+
+/* project details table */
+table.project-details {
+    width: 100%;
+    padding: 0px !important;
+    margin-top: 12px;
+    border: 0px solid transparent;
+    font-size: 14px;
+}
+
+table.project-details td {
+    padding: 6px;
+}
+
+table.project-details thead td {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+table.project-details td:nth-child(1) {
+    text-align: center;
+    width: 24px;
+}
+
+table.project-details td:nth-child(2) {
+    width: 148px;
+    font-weight: bold;
+}
+
+table.project-details tbody td {
+    vertical-align: top;
+    border: 1px solid #CCCCCC;
+}
+
+table.project-details tbody ul {
+    margin: 0px !important;
+}
+
+table.project-details tbody li {
+    margin-top: 2px;
+}
+
+/* cost details table */
+table.cost-details {
+    width: 100%;
+    padding: 0px !important;
+    margin-top: 12px;
+    border: 0px solid transparent;
+    font-size: 14px;
+}
+
+table.cost-details td {
+    padding: 6px;
+}
+
+table.cost-details thead td {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+table.cost-details tbody td {
+    vertical-align: top;
+    border: 1px solid #CCCCCC;
+}
+
+table.cost-details thead td:nth-child(3) {
+    text-align: right;
+    width: 100px;
+}
+
+table.cost-details tbody td:nth-child(1) {
+    width: 132px;
+    font-weight: bold;
+}
+
+table.cost-details tbody ul {
+    margin: 0px !important;
+    padding-left: 16px;
+    padding-right: 6px;
+}
+
+table.cost-details tbody ul li {
+    margin-bottom: 2px;
+}
+
+table.cost-details tbody td:nth-child(3) {
+    text-align: right;
+    font-family: monospace;
+}
+
+table.cost-details tbody td.total-title {
+    text-align: right;
+    font-weight: bold;
+}
+
+table.cost-details tbody li {
+    margin-top: 2px;
+}
+
+/* product comparison table */
+table.product-comparison {
+    width: 100%;
+    padding: 0px !important;
+    margin-top: 12px;
+    border: 0px solid transparent;
+    font-size: 13px;
+}
+
+table.product-comparison td {
+    padding: 4px;
+}
+
+table.product-comparison thead td {
+    background-color: #A7C7E7;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.product-comparison tbody td:nth-child(1) {
+    font-weight: bold;
+    text-align: left;
+}
+
+table.product-comparison tbody td {
+    vertical-align: middle;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+}
+
+div.product-comparison-note {
+    width: 100%;
+    font-size: 13px;
+    text-align: right;
+}
+
+#after-milestone-2 ul li {
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 720px) {
+    .content {
+        width: 92%;
+    }
+
+    .page-header .helikon-logo {
+        width: 120px;
+    }
+    
+    .page-header .polkadot-logo {
+        width: 120px;
+    }
+
+    .header-1 {
+        font-size: 36px;
+        margin-top: 32px;
+        line-height: 46px;
+    }
+
+    .figure-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .figure-half {
+        width: 90%;
+    }
+
+    .subsection-title {
+        font-size: 15px;
+    }
+
+    table.project-details td:nth-child(2) {
+        width: 116px;
+    }
+}
