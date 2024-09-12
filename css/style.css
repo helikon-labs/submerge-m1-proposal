@@ -111,7 +111,7 @@ td {
 }
 
 .summary-title-cell {
-    flex-basis: 90px;
+    flex-basis: 120px;
     flex-grow: 0;
     flex-shrink: 0;
     font-weight: bold;
