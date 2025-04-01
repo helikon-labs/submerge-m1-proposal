@@ -412,6 +412,7 @@ table.storage {
     margin-top: 12px;
     border: 0px solid transparent;
     width: 100%;
+    font-size: 13px;
 }
 
 table.storage td {
@@ -451,18 +452,18 @@ table.storage tbody td:nth-child(4) {
 /* item progress */
 div.item-progress-container {
     width: 100%;
-    height: 32px;
-    border-radius: 6px;
+    height: 28px;
+    border-radius: 4px;
     overflow: hidden;
     border: 1px solid #00000055;
     display: flex;
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 div.item-progress {
     height: 100%;
-    background-color: green;
+    background-color: #659DF2;
 }
 
 div.item-progress-label-container {
@@ -488,6 +489,7 @@ div.item-progress-label-container span {
     padding: 0px 4px 0px 4px;
     box-sizing: border-box;
     border: 1px solid #DDDDDD;
+    height: 22px;
 }
 
 div.item-progress-label-container span.dark {
@@ -500,6 +502,7 @@ table.expenditures {
     margin-top: 12px;
     border: 0px solid transparent;
     width: 100%;
+    font-size: 13px;
 }
 
 table.expenditures td {
