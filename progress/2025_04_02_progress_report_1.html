@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Submerge - Progress Report No.1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+        <link rel="icon" type="image/png" href="../img/favicon.ico">
+        <link rel="stylesheet" href="../css/style.css?v=2">
+    </head>
+    <body>
+        <div class="page-header-container">
+            <div class="page-header">
+                <img class="helikon-logo" src="../img/helikon.png" alt="Helikon">
+                <img class="polkadot-logo" src="../img/polkadot.png" alt="Polkadot">
+            </div>
+            <hr>
+        </div>
+        <div class="content-container">
+            <div class="content">
+                <div class="header-1">
+                    <img src="../img/logo.svg" class="logo">
+                </div>
+                <div class="header-2">Progress Report No.1, 02.04.2025</div>
+                <div class="section" id="tldr">
+                    <div class="section-header">0. TL;DR</div>
+                    <div class="section-body">
+                        <ul>
+                            <li><strong>Alpha release</strong> due on the <strong>19th of June, 2025.</strong></li>
+                            <li>Project will be <strong>open-sourced on release</strong>.</li>
+                            <li>No major changes in architecture; <strong>additional components</strong> introduced.</li>
+                            <li><strong>Two additional chains</strong> integrated, Astar and Acala, bringing the <strong>number of supported chains to 21</strong>.</li>
+                            <li>Development work completed for bottom-layer indexing and KYT integration; ongoing for the rest of the components.</li>
+                            <li><strong>KYT integration</strong> with the first provider <strong>completed</strong>.</li>
+                            <li>Design work completed for branding; UX/UI design and web application development in progress.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section" id="summary">
+                    <div class="section-header">1. Introduction</div>
+                    <div class="section-body">
+                        The project's planned <strong>start date of the 1st of November, 2024 was delayed to the 2nd of December, 2024</strong> due to a number of factors,
+                        including a review and basic testing of the architectural model, coordination with the design team abroad and their relocation
+                        for the intensive kick-off work, and the validation of the infrastructure requirements.<br>
+                        <br>
+                        This document outlines the architectural changes we made to the initial design, the challenges we have faced so far, our progress
+                        across different components of the system, the project timeline, and the current budgetary status.
+                    </div>
+                </div>
+                <div class="section" id="architectural-changes">
+                    <div class="section-header">2. Architectural Changes</div>
+                    <div class="section-body">
+                        <div class="figure-container">
+                            <img src="../img/architecture.jpg" alt="Submerge Architecture Update">
+                        </div>
+                        A number of architectural changes were introduced after initial reviews and technical work, as explained below.<br>
+                        <br>
+                        The <strong>Submerge Indexer</strong> was broken down into four separate components:<br>
+                        <br>
+                        <ol type="i">
+                            <li>
+                                <strong>Submerge Crystal</strong><br>
+                                Indexes the complete history of all state changes in all chains in raw binary format. Deployed per chain.
+                            </li>
+                            <li>
+                                <strong>Submerge Fractal</strong><br>
+                                Processes the output of <strong>Submerge Crystal</strong> to index selected storage items into a queryable format.
+                                Also indexes data related to state transitions, such as block headers, extrinsics, events, etc.
+                                Supports backfilling.
+                                Deployed per chain.
+                            </li>
+                            <li>
+                                <strong>Submerge Bloom</strong><br>
+                                Transforms the output of <strong>Submerge Fractal</strong> into queryable relational models, as defined by DSL specifications.
+                                Supports backfilling.
+                                Deployed per chain.
+                            </li>
+                            <li>
+                                <strong>Submerge Mycelium</strong><br>
+                                Processes data from all deployed chains to index and track cross-chain data (XCM). Single deployment.
+                            </li>
+                        </ol>
+                        <br>
+                        Other changes include:<br>
+                        <br>
+                        <ol type="i">
+                            <li>
+                                <strong>Submerge Analyst</strong>, the component that hosts and executes data analysis algorithms, is now called
+                                <strong>Submerge Cortex</strong>.
+                            </li>
+                            <li>
+                                <strong>Submerge Real-Time Analytics</strong>, the component responsible for real-time analysis of multi-chain state,
+                                is now called <strong>Submerge Reflex</strong>.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="section" id="challenges-faces">
+                    <div class="section-header">3. Challenges Faced</div>
+                    <div class="section-body">
+                        The main challenge we have faced so far has been the <strong>data storage requirements</strong>. Submerge processes the data in multiple layers,
+                        each requiring its own storage and contributing to the overall footprint.<br>
+                        <br>
+                        Most of the storage needs to be kept on NVMe hard drives to ensure fast access for analysis, which significantly increases infrastructure costs.
+                        To avoid exceeding budget, we recently ordered <strong>two high-grade, storage-focused servers</strong> to augment our current owned-hardware colocation setup.
+                        Details of this order can be found under the <i>Expenditures and Budgetary Status</i> section.<br>
+                        <br>
+                        Estimated data requirements for the relay, system and parachains are as follows:<br>
+                        <table class="storage">
+                            <tbody>
+                                <tr>
+                                    <td class="polkadot">Polkadot</td>
+                                    <td>24.0 TB</td>
+                                    <td class="kusama">Kusama</td>
+                                    <td>29.5 TB</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Asset Hub</td>
+                                    <td>2.1 TB</td>
+                                    <td class="kusama">Asset Hub</td>
+                                    <td>2.2 TB</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Bridge Hub</td>
+                                    <td>1.4 TB</td>
+                                    <td class="kusama">Bridge Hub</td>
+                                    <td>1.2 TB</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Coretime</td>
+                                    <td>0.2 TB</td>
+                                    <td class="kusama">Coretime</td>
+                                    <td>0.4 TB</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">People</td>
+                                    <td>0.3 TB</td>
+                                    <td class="kusama">People</td>
+                                    <td>0.6 TB</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Collectives</td>
+                                    <td>1.0 TB</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Acala</td>
+                                    <td>2.1 TB</td>
+                                    <td class="kusama">Bifrost</td>
+                                    <td>1.1 TB</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Astar</td>
+                                    <td>5.0 TB</td>
+                                    <td class="kusama">Moonriver</td>
+                                    <td>10.0 TB</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Bifrost</td>
+                                    <td>1.7 TB</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Centrifuge</td>
+                                    <td>1.4 TB</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Hydration</td>
+                                    <td>2.1 TB</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Hyperbridge</td>
+                                    <td>1.2 TB</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Moonbeam</td>
+                                    <td>14.2 TB</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="polkadot">Mythos</td>
+                                    <td>3.4 TB</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class="polkadot total-title">POLKADOT TOTAL</td>
+                                    <td>60.1 TB</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class="kusama total-title">KUSAMA TOTAL</td>
+                                    <td>45.0 TB</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class="total-title">TOTAL</td>
+                                    <td>105.1 TB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        We do not currently face any unsolved computational challenges, but we are experiencing issues with some RPC calls on Mythos.
+                        This issue is under investigation.
+                    </div>
+                </div>
+                <div class="section" id="progress">
+                    <div class="section-header">4. Progress by Component</div>
+                    <div class="section-body">
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 100%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Architecture Review & Validation</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 100%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Infrastructure Research</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 100%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Branding</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 100%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Crystal</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 100%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>KYT Integration (Merkle Science)</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 85%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge UI Framework</span>
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 75%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Fractal</span>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 65%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Infrastructure Deployment</span>
+                                <span>65%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 60%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>UX/UI Design</span>
+                                <span>60%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 40%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Bloom</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 40%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Sentinel</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 35%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Mycelium</span>
+                                <span>35%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 35%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Cortex</span>
+                                <span>35%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 30%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Reflex</span>
+                                <span>30%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 20%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Web Application</span>
+                                <span>20%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 10%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge Auth3</span>
+                                <span>10%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 10%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Deployment</span>
+                                <span>10%</span>
+                            </div>
+                        </div>
+                        <div class="item-progress-container">
+                            <div class="item-progress" style="width: 5%;"></div>
+                            <div class="item-progress-label-container">
+                                <span>Submerge API</span>
+                                <span>5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="timeline">
+                    <div class="section-header">5. Timeline</div>
+                    <div class="section-body">
+                        The <strong>alpha version</strong> of Submerge is going to be <strong>fully open-sourced and released on the 19th of June, 2025</strong>.
+                        Detailed <strong>architecture, build, and deployment documentation</strong> will be included in the alpha release.
+                    </div>
+                </div>
+                <div class="section" id="expenditures">
+                    <div class="section-header">6. Expenditures and Budgetary Status</div>
+                    <div class="section-body">
+                        A list of all expenditures made so far and the amounts due is provided below:
+                        <table class="expenditures">
+                            <thead>
+                                <tr>
+                                    <td>Item</td>
+                                    <td>Total Paid (USD)</td>
+                                    <td>Total Due (USD)</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Branding, UX and UI Design</td>
+                                    <td>16,800.00</td>
+                                    <td>18,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Bare-Metal Cloud Services (Temporary)</td>
+                                    <td>5,900.00</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Hardware</td>
+                                    <td>58,164.00</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>KYT License - Yearly</td>
+                                    <td>12,000.00</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>Management & Development</td>
+                                    <td>56,000.00</td>
+                                    <td>42,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="total">TOTAL</td>
+                                    <td class="total">148,864.00</td>
+                                    <td class="total">60,200.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        All invoices for the above expenditures will be published alongside the alpha release in June 2025.
+                    </div>
+                </div>
+                <div class="section" id="conclusion">
+                    <div class="section-header">7. Conclusion</div>
+                    <div class="section-body">
+                        We are continuing work on the design, architecture, and development of Submerge with great enthusiasm.
+                        We look forward to sharing the end product with the community, and advancing the platform through
+                        continued development.<br>
+                        <br>
+                        For any questions or inquiries, please reach out to us at <a href="mailto:info@helikon.io">info@helikon.io</a>.
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

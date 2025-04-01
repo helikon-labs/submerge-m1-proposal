@@ -33,7 +33,7 @@ hr {
 }
 
 .content {
-    width: 720px;
+    width: 820px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -76,8 +76,12 @@ hr {
     line-height: 52px;
 }
 
+img.logo {
+    width: 280px;
+}
+
 .header-2 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 26px;
     margin-top: 4px;
 }
@@ -361,7 +365,7 @@ div.product-comparison-note {
     margin-bottom: 4px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 820px) {
     .content {
         width: 92%;
     }
@@ -372,6 +376,10 @@ div.product-comparison-note {
     
     .page-header .polkadot-logo {
         width: 120px;
+    }
+
+    img.logo {
+        width: 240px;
     }
 
     .header-1 {
@@ -396,4 +404,134 @@ div.product-comparison-note {
     table.project-details td:nth-child(2) {
         width: 116px;
     }
+}
+
+/* storage requirements table */
+table.storage {
+    padding: 0px !important;
+    margin-top: 12px;
+    border: 0px solid transparent;
+    width: 100%;
+}
+
+table.storage td {
+    padding: 4px;
+    width: 25%;
+    border: 1px solid #CCCCCC;
+}
+
+table.storage td.polkadot {
+    background: #E6007A1D;
+}
+
+table.storage td.kusama {
+    background: #0000001D;
+}
+
+table.storage td.total-title {
+    text-align: end;
+}
+
+table.storage td:nth-child(1) {
+    font-weight: bold;
+}
+
+table.storage tbody td:nth-child(2) {
+    text-align: end;
+}
+
+table.storage tbody td:nth-child(3) {
+    font-weight: bold;
+}
+
+table.storage tbody td:nth-child(4) {
+    text-align: end;
+}
+
+/* item progress */
+div.item-progress-container {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #00000055;
+    display: flex;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+div.item-progress {
+    height: 100%;
+    background-color: green;
+}
+
+div.item-progress-label-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-sizing: border-box;
+}
+
+div.item-progress-label-container span {
+    background-color: #EEEEEE;
+    color: #000000;
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 0px 4px 0px 4px;
+    box-sizing: border-box;
+    border: 1px solid #DDDDDD;
+}
+
+div.item-progress-label-container span.dark {
+    color: #000000;
+}
+
+/* expenditures table */
+table.expenditures {
+    padding: 0px !important;
+    margin-top: 12px;
+    border: 0px solid transparent;
+    width: 100%;
+}
+
+table.expenditures td {
+    padding: 4px;
+    width: 25%;
+    border: 1px solid #EEEEEE;
+    width: 20%;
+}
+
+table.expenditures thead td {
+    background-color: #DDDDDD;
+    font-weight: bold;
+}
+
+table.expenditures tbody td:nth-child(1) {
+    font-weight: bold;
+    width: 40%;
+}
+
+
+table.expenditures tbody td:nth-child(2) {
+    text-align: end;
+    font-family: monospace;
+}
+
+table.expenditures tbody td:nth-child(3) {
+    text-align: end;
+    font-family: monospace;
+}
+
+table.expenditures tbody td.total {
+    text-align: end;
+    font-weight: bold;
+    background-color: #EEEEEE;
 }
