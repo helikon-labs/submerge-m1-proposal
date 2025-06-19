@@ -538,3 +538,19 @@ table.expenditures tbody td.total {
     font-weight: bold;
     background-color: #EEEEEE;
 }
+
+div.photo-container {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+div.photo-container img {
+    height: 100%;
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Submerge - Progress Report No.2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1">
+        <link rel="icon" type="image/png" href="../img/icon_circular.png">
+        <link rel="stylesheet" href="../css/style.css?v=5">
+    </head>
+    <body>
+        <div class="page-header-container">
+            <div class="page-header">
+                <img class="helikon-logo" src="../img/helikon_new.png" alt="Helikon">
+                <img class="polkadot-logo" src="../img/polkadot.png" alt="Polkadot">
+            </div>
+            <hr>
+        </div>
+        <div class="content-container">
+            <div class="content">
+                <div class="header-1">
+                    <img src="../img/logo.svg" class="logo">
+                </div>
+                <div class="header-2">Progress Report No.2, 19.06.2025</div>
+                <div class="section" id="tldr">
+                    <div class="section-header">0. TL;DR</div>
+                    <div class="section-body">
+                        <ul>
+                            <li>Separate release dates have been set for individual components (<strong>Crystal, Fractal, Bloom, Mycelium, Cortex, Reflex, Sentinel, API, Auth3,</strong> and the <strong>web application</strong>), with a slight delay introduced to the originally announced release date of 19 June 2025, as outlined in the <a href="./2025_04_02_progress_report_1.html">first progress report</a>.</strong></li>
+                            <li>No major architectural changes have been introduced. The components remain the same.</li>
+                            <li>Physical infrastructure has been completed, with two high-grade servers installed in the Helikon data center rack in İstanbul.</li>
+                            <li><strong>Crystal</strong>, the indexer component, is scheduled for release on 1 July 2025 in both hosted and self-hosted versions. All indexed data, including state traces, will be accessible through the Crystal API upon release.</li>
+                            <li>New integrations are being developed for <strong>Sentinel</strong>, the security component: Chainalysis Sactions API, Scorechain Sanction List, and the OFAC API.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section" id="summary">
+                    <div class="section-header">1. Infrastructure</div>
+                    <div class="section-body">
+                        Two new high-grade <strong>Supermicro AS-11245HS-TNR</strong> servers, dedicated to the Submerge installation, have been installed in the Helikon data center rack, located in central İstanbul.
+                        <div class="photo-container">
+                            <img alt="Submerge servers boxed." src="./img/servers_boxed.jpeg">
+                            <img alt="Submerge servers setup process." src="./img/servers_setup.jpeg">
+                            <img alt="Submerge servers in the server rack." src="./img/rack.jpeg">
+                        </div>
+                        Together, these servers provide a total of <strong>128 cores / 256 threads @ 3.25GHz across 4 CPUs, 2TB of DDR5 RAM, and 123.4TB of NVMe storage</strong>.<br>
+                        <br>
+                        This capacity is utilised by both the RPC nodes dedicated to Submerge services and the Submerge components themselves, supporting all serviced blockchains on:
+                        <ul>
+                            <li><strong>Polkadot:</strong> Relay Chain, Asset Hub, Bridge Hub, Collectives, Coretime, People, Acala, Astar, Bifrost, Centrifuge, Hydration, Hyperbridge, Moonbeam, Mythos</li>
+                            <li><strong>Kusama:</strong> Relay Chain, Asset Hub, Bridge Hub, Coretime, People, Bifrost, Moonriver</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section" id="architectural-changes">
+                    <div class="section-header">2. New Integrations for Sentinel</div>
+                    <div class="section-body">
+                        The first integration for <strong>Sentinel</strong>, the security component, was completed with <strong>Merkle Science</strong>, as reported in the first progress report.<br>
+                        <br>
+                        We are now working to integrate additional data sources to enrich Submerge's access to sanctioned addresses, enhancing account attribution and risk assessment for bridged Ethereum addresses, and preparing for future integrations with other blockchains.<br>
+                        <br>
+                        The new integrations in progress are:
+                        <ol>
+                            <li><strong>Chainalysis Sanctions API:</strong> Checks addresses against known sanctions lists.</li>
+                            <li><strong>Scorechain Sanctions API:</strong> Detects interactions with addresses linked to sanctioned individuals or entities, with comprehensive coverage across 14 blockchains.</li>
+                            <li><strong>OFAC API:</strong> A global sanctions and risk database covering names, addresses, IDs, crypto wallets, business information, and more.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="section" id="challenges-faces">
+                    <div class="section-header">3. Component Release Dates</div>
+                    <div class="section-body">
+                        <strong>1 July 2025</strong>
+                        <ul>
+                            <li><strong>Submerge Crystal:</strong> Indexes and decodes block data, extrinsics, events, and state traces for all 21 supported chains. Available in both hosted and self-hosted versions.</li>
+                            <li><strong>Submerge API:</strong> Provides unified access to all Submerge component APIs. At this release date, it will provide access to the Crystal API, through which users can access all data made available by this component.</li>
+                        </ul>
+                        <strong>8 July 2025</strong>
+                        <ul>
+                            <li><strong>Submerge Sentinel:</strong> Security component that tracks balance transfers within and across supported blockchains. Integrated with Merkle Science, Chainalysis, Scorechain, and OFAC APIs.</li>
+                        </ul>
+                        <strong>22 July 2025</strong>
+                        <ul>
+                            <li><strong>Submerge Mycelium:</strong> Tracks cross-chain entities such as XCM messages, token transfers, and accounts.</li>
+                            <li><strong>Submerge Auth3:</strong> Provides authentication and authorisation via wallet signatures and predefined access rules.</li>
+                        </ul>
+                        <strong>5 August 2025</strong>
+                        <ul>
+                            <li><strong>Submerge Fractal:</strong> Maps decoded storage items to queryable canonical schemas. Deployed per chain.</li>
+                            <li><strong>Submerge Bloom:</strong> Transforms the output of Fractal into queryable relational models, defined through DSL specifications. Deployed per chain.</li>
+                        </ul>
+                        <strong>19 August 2025</strong>
+                        <ul>
+                            <li><strong>Submerge Cortex:</strong> Hosts data processing algorithms including clustering, community detection, linking, anomaly detection, autoencoders, and association mining.</li>
+                            <li><strong>Submerge Reflex:</strong> Hosts real-time analysis algorithms and functions.</li>
+                        </ul>
+                        <strong>26 August 2025</strong>
+                        <ul>
+                            <li><strong>Submerge Web Application:</strong> The grid-based front-end application for the complete suite.</li>
+                        </ul>
+                        <br>
+                        All components will be open-source and accompanied by documentation and API references at launch.
+                    </div>
+                </div>
+                <div class="section" id="conclusion">
+                    <div class="section-header">7. Conclusion</div>
+                    <div class="section-body">
+                        Albeit with delays, our data research work continues, committed to delivering a complete data suite for the Polkadot ecosystem.<br>
+                        <br>
+                        For any questions or inquiries, please reach out to us at <a href="mailto:info@helikon.io">info@helikon.io</a>.
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
